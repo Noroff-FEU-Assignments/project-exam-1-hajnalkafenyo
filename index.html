@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img class="logo" src="images/logo.png" alt="Book logo" /></a>
+        <nav class="header-menu">
+            <ul class="menu">
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!--TODO: may be this div is not needed -->
+        <div class="content">
+            <div>
+                <img class="banner" src="images/home.png" alt="Home picture" />
+            </div>
+            <h1>My Blog</h1>
+            <div id="carusel" class="carusel">
+                <div><!--Left arrow -->
+                    <img id="left-arrow" class="arrow-button" src="images/left-arrow.png" alt="Left arrow" />
+                </div>
+                <div id="card-container" class="card-container"><!--Carusel -->
+                </div>
+                <div><!--Right arrow -->
+                    <img id="right-arrow" class="arrow-button" src="images/right-arrow.png" alt="Right arrow" />
+                </div>
+            </div>
+            <div id="loading" class="display"><img src="/images/loading.svg"></div>
+            <div id="error" class="hidden"><img src="/images/error.jpg"></div>
+        </div>
+    </main>
+    <footer>
+        <p>Book-blog</p>
+        <h6>&copy;All rights reserved</h6>
+    </footer>
+    <script src="./index.js"></script>
+</body>
+
+</html>

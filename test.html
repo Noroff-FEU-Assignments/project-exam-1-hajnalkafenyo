@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function divide(a, b) {
+            if (b === 0) {
+                throw new Error("Cannot divide by 0")
+            }
+
+            return a / b;
+        }
+
+        const x = 10;
+        for (let y = -3; y <= 3; y++) {
+            try {
+                console.log("A divide elott vagyok")
+                const z = divide(x, y);
+                console.log('A divide után vagyok');
+                console.log(`${x} / ${y} = ${z}`)
+            } catch (e) {
+                console.log("Hiba történt, ", e)
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
