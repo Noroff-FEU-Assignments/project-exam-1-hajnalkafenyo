@@ -45,10 +45,8 @@ function blogCard(postData, mediaData) {
 }
 
 async function main() {
-    debugger;
     try {
         const listOfFullPosts = await fetchData(basePostUrl);
-        //const post = mapPost(data);
         let s = "";
         for (let i = 0; i < listOfFullPosts.length; i++) {
             const element = listOfFullPosts[i];

@@ -26,7 +26,7 @@ function mapPost(fullPost) {
 
 function mapMedia(fullMedia) {
     const newMedia = {
-        url: fullMedia.guid.rendered,
+        url: fullMedia.media_details.sizes.large.source_url,
     }
     return newMedia;
 }
@@ -45,7 +45,6 @@ function showMedia(MediaObjectum) {
 }
 
 async function main() {
-    debugger;
     try {
         const data = await fetchData(fullPostUrl);
         const post = mapPost(data);
