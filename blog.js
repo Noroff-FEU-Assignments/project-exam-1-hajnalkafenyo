@@ -1,5 +1,5 @@
-const basePostUrl = 'http://book-blog-api.local/wp-json/wp/v2/posts';
-const mediaUrl = 'http://book-blog-api.local/wp-json/wp/v2/media/';
+const basePostUrl = 'https://book-blog-hajnalka.flywheelsites.com/wp-json/wp/v2/posts';
+const mediaUrl = 'https://book-blog-hajnalka.flywheelsites.com/wp-json/wp/v2/media/';
 
 const container = document.getElementById('blog-container');
 

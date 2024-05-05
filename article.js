@@ -2,9 +2,9 @@
 const urlParams = new URLSearchParams(window.location.search);
 const id = urlParams.get('id');
 
-const basePostUrl = 'http://book-blog-api.local/wp-json/wp/v2/posts/';
+const basePostUrl = 'https://book-blog-hajnalka.flywheelsites.com/wp-json/wp/v2/posts/';
 const fullPostUrl = basePostUrl + id;
-const mediaUrl = 'http://book-blog-api.local/wp-json/wp/v2/media/';
+const mediaUrl = 'https://book-blog-hajnalka.flywheelsites.com/wp-json/wp/v2/media/';
 
 
 /*
