@@ -6,11 +6,6 @@ const basePostUrl = 'https://book-blog-hajnalka.flywheelsites.com/wp-json/wp/v2/
 const fullPostUrl = basePostUrl + id;
 const mediaUrl = 'https://book-blog-hajnalka.flywheelsites.com/wp-json/wp/v2/media/';
 
-
-/*
-TODO: 2. Error handling
-*/
-
 async function fetchData(url) {
     const response = await fetch(url);
     const c = await response.json();

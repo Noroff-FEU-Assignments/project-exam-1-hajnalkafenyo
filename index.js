@@ -9,7 +9,6 @@ async function fetchData(url) {
     if (totalPagesValue) {
         totalpages = totalPagesValue
     }
-    console.log(totalpages);
     return c;
 }
 
@@ -48,7 +47,6 @@ function nextPage() {
         return
     }
     page++
-    console.log(page);
     main()
 
 }
@@ -57,15 +55,12 @@ function previousPage() {
         return
     }
     page--
-    console.log(page);
     main()
 
 }
 
 document.getElementById("right-arrow").addEventListener("click", nextPage);
 document.getElementById("left-arrow").addEventListener("click", previousPage);
-
-console.log('Mikor fogok lefutni');
 
 async function main() {
     try {
