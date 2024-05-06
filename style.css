@@ -24,6 +24,7 @@ header{
     flex-direction: row;
     gap: 60px;
     list-style: none;
+    padding: 12px;
 }
 
 .menu a{
@@ -216,6 +217,10 @@ h1{
     text-align: center;
     font-family: var(--font-header);
     font-size: 38px;
+}
+
+#title{
+    width: 960px;
 }
 
 .content{
