@@ -13,7 +13,7 @@ function mapPost(fullPost) {
     const neWData = {
         id: fullPost.id,
         title: fullPost.title.rendered,
-        date: fullPost.date,
+        date: fullPost.date.slice(0, 10),
         excerpt: fullPost.excerpt.rendered,
         banner: fullPost.featured_media,
     }
@@ -23,6 +23,7 @@ function mapPost(fullPost) {
 function mapMedia(fullMedia) {
     const newMedia = {
         url: fullMedia.media_details.sizes.thumbnail.source_url,
+        alt: fullMedia.alt_text,
     }
     return newMedia;
 }
@@ -33,7 +34,7 @@ function blogCard(postData, mediaData) {
     <div class="blog-item">
                     <h2>${postData.title}</h2>
                     <div class="blog-item-content">
-                        <img class="blog-item-thumbnail" src="${mediaData.url}" alt="Card picture" /></a>
+                        <img class="blog-item-thumbnail" src="${mediaData.url}" alt="${mediaData.alt}" /></a>
                         <div>
                             <p>${postData.excerpt}</p>
                             <p>${postData.date}</p>

@@ -48,6 +48,13 @@ main{
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    flex-grow: 1;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .banner{
@@ -117,8 +124,13 @@ main{
 .article-container{
     max-width: 960px;
     border-radius: 12px;
-    background-color: #B5E2FA;
+    background-color: #c7e3f4;
     padding: 12px;
+}
+
+.left{
+    float:left;
+    padding-right: 12px;
 }
 
 .content-block{
@@ -193,7 +205,7 @@ main{
 .profil-picture{
     float: left;
     border-radius: 12px;
-    margin: 12px;
+    margin: 0 12px;
     
 @media only screen and (max-width:767px) {
     margin:0;

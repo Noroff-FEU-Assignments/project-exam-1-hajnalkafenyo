@@ -27,6 +27,7 @@ function mapPost(fullPost) {
 function mapMedia(fullMedia) {
     const newMedia = {
         url: fullMedia.media_details.sizes.large.source_url,
+        alt: fullMedia.alt_text,
     }
     return newMedia;
 }
@@ -36,12 +37,13 @@ function mapMedia(fullMedia) {
 function showBlogData(blogData) {
     document.getElementById('title').innerHTML = blogData.title;
     document.getElementById('article-container').innerHTML =
-        blogData.content;
+        blogData.content + "<span>" + blogData.date.slice(0, 10) + "</span>";
 
 }
 
 function showMedia(MediaObjectum) {
     document.getElementById('banner').src = MediaObjectum.url;
+    document.getElementById('banner').alt = MediaObjectum.alt;
 }
 
 async function main() {
