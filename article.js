@@ -36,6 +36,7 @@ function mapMedia(fullMedia) {
 
 function showBlogData(blogData) {
     document.getElementById('title').innerHTML = blogData.title;
+    document.title = blogData.title;
     document.getElementById('article-container').innerHTML =
         blogData.content + "<span>" + blogData.date.slice(0, 10) + "</span>";
 

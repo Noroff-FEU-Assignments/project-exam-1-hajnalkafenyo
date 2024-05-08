@@ -173,7 +173,7 @@ body{
     flex-direction: column;
     gap: 12px;
     border-radius: 12px;
-    margin: 12px;
+    margin: 12px 0;
     background-color: #B5E2FA;
     @media only screen and (max-width:767px) {
         border-radius: 0;

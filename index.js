@@ -26,6 +26,7 @@ function mapPost(fullPost) {
 function mapMedia(fullMedia) {
     const newMedia = {
         url: fullMedia.media_details.sizes.thumbnail.source_url,
+        alt: fullMedia.alt_text,
     }
     return newMedia;
 }
@@ -33,7 +34,7 @@ function mapMedia(fullMedia) {
 function blogCard(postData, mediaData) {
     return `
     <div class="card">
-                        <img class="card-picture" src="${mediaData.url}" alt="Card picture" /></a>
+                        <img class="card-picture" src="${mediaData.url}" alt="${mediaData.alt}" /></a>
                         <h2>${postData.title}</h2>
                         <p>${postData.excerpt}</p>
                         <a href="article.html?id=${postData.id}" class="button">Read more...</a>
