@@ -18,6 +18,7 @@ function mapPost(fullPost) {
         title: fullPost.title.rendered,
         date: fullPost.date,
         content: fullPost.content.rendered,
+        excerpt: fullPost.excerpt.rendered,
         banner: fullPost.featured_media,
     }
     return neWData;
@@ -39,6 +40,7 @@ function showBlogData(blogData) {
     document.title = blogData.title;
     document.getElementById('article-container').innerHTML =
         blogData.content + "<span>" + blogData.date.slice(0, 10) + "</span>";
+    document.head.querySelector("meta[name=description]").content = blogData.excerpt;
 
 }
 
