@@ -41,6 +41,7 @@ function showBlogData(blogData) {
     document.getElementById('article-container').innerHTML =
         blogData.content + "<span>" + blogData.date.slice(0, 10) + "</span>";
     document.head.querySelector("meta[name=description]").content = blogData.excerpt;
+    document.head.querySelector("meta[name=title]").content = blogData.title;
 
 }
 

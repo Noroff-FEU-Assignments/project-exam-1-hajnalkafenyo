@@ -251,6 +251,10 @@ h1{
     margin: 0;
 }
 
+.fieldError{
+    color: #DB382A;
+}
+
 .social-media-icons{
     display: flex;
     flex-direction: row;
