@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Contact page">
+    <meta name="description" content="Contact me">
     <title>Contact</title>
     <link rel="stylesheet" href="style.css" />
     <!-- Hotjar Tracking Code for Book Blog -->
@@ -36,17 +38,27 @@
                 <img class="banner" src="images/contact-banner.png" alt="A cozy desk with a coffee cup and books" />
             </div>
             <div class="content-block">
-                <h2>Contact me</h2>
-                <form class="contact-form">
+                <h1>Contact me</h1>
+                <form class="contact-form" id="contact-form">
 
                     <label for="name">Name</label>
                     <input type="text" name="name" id="name" />
+                    <span class="fieldError" id="nameError"></span>
                     <label for="email">Email</label>
                     <input type="text" name="email" id="email" />
+                    <span class="fieldError" id="email-error"></span>
+                    <label for="subject">Subject</label>
+                    <input type="text" name="subject" id="subject" />
+                    <span class="fieldError" id="subjectError"></span>
                     <label for="message">Message</label>
                     <textarea type="text" name="message" id="message" rows="5"></textarea>
+                    <span class="fieldError" id="messageError"></span>
                     <button class="button" type="submit">Submit</button>
                 </form>
+                <div class="hidden" id="thank-you-message">
+                    <h2>Thank you!</h2>
+                    <p>I have received your message and I will respond asap</p>
+                </div>
             </div>
         </div>
 
@@ -55,6 +67,7 @@
         <p>Book-blog</p>
         <h6>&copy;All rights reserved</h6>
     </footer>
+    <script src="./contact.js"></script>
 </body>
 
 </html>
