@@ -3,9 +3,13 @@ const mediaUrl = 'https://book-blog-hajnalka.flywheelsites.com/wp-json/wp/v2/med
 
 const container = document.getElementById('blog-container');
 
+let totalPages;
 async function fetchData(url) {
     const response = await fetch(url);
     const c = await response.json();
+    if (response.headers.has("X-Wp-Totalpages")) {
+        totalPages = parseInt(response.headers.get("X-Wp-Totalpages"))
+    }
     return c;
 }
 
@@ -45,9 +49,12 @@ function blogCard(postData, mediaData) {
     `
 }
 
+let page = 1;
+
 async function main() {
     try {
-        const listOfFullPosts = await fetchData(basePostUrl);
+        const fullUrl = `${basePostUrl}?page=${page}`
+        const listOfFullPosts = await fetchData(fullUrl);
         let s = "";
         for (let i = 0; i < listOfFullPosts.length; i++) {
             const element = listOfFullPosts[i];
@@ -58,10 +65,15 @@ async function main() {
             const blogCardData = blogCard(mappedPost, mappedMedia);
             s += blogCardData
         }
-        document.getElementById('blog-container').innerHTML = s;
+        document.getElementById('blog-container').innerHTML += s;
 
         document.getElementById('blog-container').style.display = 'block';
         document.getElementById('loading').style.display = 'none';
+        if (totalPages > page) {
+            document.getElementById('loadMoreButton').style.display = "block";
+        } else {
+            document.getElementById('loadMoreButton').style.display = "none";
+        }
 
     } catch (e) {
         document.getElementById('error').style.display = 'block';
@@ -71,3 +83,12 @@ async function main() {
     }
 }
 main();
+
+function buttonClick() {
+    console.log('buttonklikk');
+    page += 1;
+    main();
+}
+
+const loadMoreButton = document.getElementById('loadMoreButton');
+loadMoreButton.addEventListener('click', buttonClick);
