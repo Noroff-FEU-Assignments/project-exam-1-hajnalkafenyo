@@ -71,32 +71,3 @@ function submit(e) {
 
 
 
-
-/*
-function checkName(x) {
-    var x = document.myForm;
-    const input = x.name.value;
-    const errMsgHolder = document.getElementById('nameErrMsg');
-    if (input.length < 5) {
-        errMsgHolder.innerHTML =
-            'Please enter a name with at least 5 letters';
-        return false;
-    } else if (!(/^\S{3,}$/.test(input))) {
-        errMsgHolder.innerHTML =
-            'Name cannot contain whitespace';
-        return false;
-    } else if (!(/^[a-zA-Z]+$/.test(input))) {
-        errMsgHolder.innerHTML =
-            'Only alphabets allowed'
-    }
-    else if (!(/^(?:(\w)(?!\1\1))+$/.test(input))) {
-        errMsgHolder.innerHTML =
-            'per 3 alphabets allowed'
-    }
-    else {
-        errMsgHolder.innerHTML = '';
-        return undefined;
-    }
-
-}
-*/
