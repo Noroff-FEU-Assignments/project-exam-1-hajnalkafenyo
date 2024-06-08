@@ -1,68 +1,82 @@
-## Project Exam 1
+# Book blog
 
-## Goal
+![image](./images/screenshot.png)
 
-To put into practice the skills learned over your first year of studies.
+This project is a blog for book related content.
+I use this blog to write about books I have read, and to share my thoughts and opinions on them.
 
-## Brief
-You have been tasked with creating a blog site. You can choose the design and topics covered on the blog, but it should have at least the following pages:
--	Home page
--	About page
--	List of blog posts
--	Blog post specific pages
--	Contact page.
+## Description
 
-### Home Page
+The project is a static website that uses HTML, CSS, and JavaScript. The data is stored in a WordPress site, and the website uses the WordPress REST API to fetch the data and display it to the user.
 
-The home page should feature a 'Latest Posts' section, designed as a carousel (slider) for the desktop version. As an example, you could display four posts at a time, although you're welcome to adjust this number to better suit your design. Users should be able to click an arrow on the right to scroll through to the next set of posts, and an arrow on the left to view the previous set. For the mobile version, you are free to alter the layout as you deem appropriate, without being tied to a carousel format.
+### [Home Page](./index.html)
 
-### Blog Page
+The home page features a 'Latest Posts' section, designed as a carousel (slider) for the desktop version, displays four posts at a time. Users should be able to click an arrow on the right to scroll through to the next set of posts, and an arrow on the left to view the previous set. It works on the same in the mobile version.
 
-The blog posts page should show the first 10 blogs, and the user should click to view more results which then show underneath the first 10 blogs.
+### [Blog Page](./blog.html)
 
-### Blog Specific Page
+The blog posts page show the first 10 blogs, and the user can click to view more button ,which then shows the next 10 items underneath the first 10 blogs.
 
-The content of the blog specific page should be dynamically built using a query string parameter based on whatever link the user clicked. The title of the blog specific page should change based on the blog that has been clicked on e.g. “My Blog | An Article I Wrote”.
+### [Article Page](./article.html)
 
-If images on the blog specific page are clicked, a modal should appear giving the user a bigger view of that image. Clicking outside the image should hide the modal.
+The content of the blog specific page is dynamically built using a query string parameter based on whatever link the user clicked. The title of the blog specific page changes based on the blog that has been clicked on.
 
-### Contact page
+### [Contact page](./contact.html)
 
-Create a contact us page, there should be 4 textboxes on this page.
--	Name (Should be more than 5 characters long)
--	Email address (Must be a valid email address)
--	Subject (Should be more than 15 characters long)
--	Message content (Should be more than 25 characters long)
+The contact page is a form that allows users to send a message to the website owner.
 
-Please use JavaScript for validation, show error messages if the values in the textboxes do not meet the requirements.
+On the form there are 4 textboxes:
+
+- **Name** (Should be more than 5 characters long)
+- **Email address** (Must be a valid email address)
+- **Subject** (Should be more than 15 characters long)
+- **Message content** (Should be more than 25 characters long)
+  I have used JavaScript for validation, show error messages if the values in the textboxes do not meet the requirements.
+
+## Built With
+
+- HTML
+- CSS
+- JavaScript
+- [Wordpress](https://wordpress.com/)
+- [Netlify](https://www.netlify.com/)
+- [Flywheel](https://getflywheel.com/)
+
+## Getting Started
+
+### Installing
+
+This project is a static website, so you can simply download the files and open the `index.html` file in your browser to view the website.
+
+Clone the repo with the following command:
+
+```bash
+git clone https://github.com/Noroff-FEU-Assignments/project-exam-1-hajnalkafenyo.git
+```
+
+### Running
+
+To run the project, simply open the `index.html` file in your browser.
 
 ### WordPress
 
-The content for your website will be stored on a WordPress installation used as a Headless CMS. It’s important to note that we are only using WordPress to provide an API and add content for the blog. You should not submit a link to a WordPress site, but build your website using HTML, CSS and JavaScript and making a call to the WordPress REST API to fetch the data. 
+You can use the existing Wordpess installation configured in the JavaScript files.
 
-The project has two aspects:
--	API from your WordPress installation
--	Your website built with HTML, CSS and JavaScript
+To use a new WordPress site as the backend for the project, you will need to install the WordPress site on a server. You can use a service like Flywheel to host the site, or you can use a local server like Local by Flywheel.
 
-You will need to add at least 12 blogs for your website. You can use lorem ipsum for paragraphs if you need, but headings, images etc. should all make sense.
+## Contributing
 
-Note that this is an exam, and therefore tutor support will be limited as per the study plan.
+Contributions are welcome! Please make a fork of the repo, make your changes and create a Pull Request. I will review the PR and merge it if it looks good.
 
-## Level 1 Process
+- For CSS classes and IDs, I use the BEM naming convention, so please follow this convention when adding new styles.
 
-1.	Decide on the theme for the blog you’re going to make
-2.	Create a prototype of the website
-3.	Install WordPress on your web host and add the blogs on the admin panel. 
-4.	Use the GitHub repo created by GitHub Classroom for your files and deploy to Netlify
-5.	Build your website using HTML, CSS and JavaScript making a call to the WordPress REST API to fetch your data.
-6.	Install Hotjar on your website.
-7.	Ask users to test your website, and adjust based on their feedback and any insights from Hotjar.
-8.	Write a report documenting your project (template provided in this repository).
-9.	Submit your report as a PDF and a link to both your Netlify deployment and your GitHub repo.
- 
-## Level 2 Process (optional)
+## Contact
 
-1.	You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for. 
-2.	Post the data from the contact form to WordPress so you have the details saved.
-3.	Allow users to submit comments on a blog post, and post this data to WordPress
+Contact me on the following social media platforms:
 
+[LinkedIn](https://www.linkedin.com/in/hajnalka-zsobr%C3%A1kn%C3%A9-feny%C5%91-aab810130/)
+
+## Acknowledgments
+
+This project was made as a part of the Noroff Frontend Development course.
+Thanks to my friends who tested the website and gave me feedback.
