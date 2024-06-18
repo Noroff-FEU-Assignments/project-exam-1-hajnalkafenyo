@@ -49,16 +49,16 @@ function submit(e) {
     e.preventDefault();
     const nameValue = document.getElementById('name').value;
     const isNameValid = validateName(nameValue);
-    document.getElementById('nameError').innerText = (isNameValid ? '' : 'The name is too short');
+    document.getElementById('nameError').innerText = (isNameValid ? '' : 'The name is too short, it should be more than 5 characters long');
     const emailValue = document.getElementById('email').value;
     const isEmailValid = validateEmail(emailValue);
-    document.getElementById('email-error').innerText = (isEmailValid ? '' : 'The email is not valid');
+    document.getElementById('email-error').innerText = (isEmailValid ? '' : 'The email is not valid, it must be a valid email address');
     const subjectValue = document.getElementById('subject').value;
     const isSubjectValid = validateSubject(subjectValue);
-    document.getElementById('subjectError').innerText = (isSubjectValid ? '' : 'The subject is too short');
+    document.getElementById('subjectError').innerText = (isSubjectValid ? '' : 'The subject is too short, it should be more than 15 characters long');
     const messageValue = document.getElementById('message').value;
     const isMessageValid = validateMessage(messageValue);
-    document.getElementById('messageError').innerText = (isMessageValid ? '' : 'The message is too short');
+    document.getElementById('messageError').innerText = (isMessageValid ? '' : 'The message is too short, it should be more than 25 characters long');
 
     if (isNameValid && isEmailValid && isMessageValid && isSubjectValid) {
         document.getElementById('contact-form').style.display = 'none';
