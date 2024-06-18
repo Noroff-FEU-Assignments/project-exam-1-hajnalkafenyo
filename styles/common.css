@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Slabo+27px&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+:root{
+    --font-header:"Slabo 27px";
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Sofia Sans";
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #B5E2FA;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    list-style: none;
+    padding: 12px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu a:visited{
+    color: black;
+}
+
+.menu a:active{
+    color: black;
+}
+
+.logo {
+    width: 48px;
+}
+
+main{
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-grow: 1;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.banner{
+    width: 100%;
+}
+
+.content-block{
+    border-radius: 12px;
+    background-color: #B5E2FA;
+    padding: 12px;
+    width: 100%;
+    @media only screen and (max-width:767px) {
+    width: 80%;
+    align-items: center;
+    overflow: hidden;
+    }
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 12px 0;
+    align-items: center;
+}
+
+.hidden{
+    display: none;
+}
+
+
+.button{
+    background-color: #0FA3B1;
+    color: #FFFFFF;
+    border-radius: 12px;
+    height: 36px;
+    border:0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+}
+
+h1{
+    text-align: center;
+    font-family: var(--font-header);
+    font-size: 38px;
+}
+
+#error{
+    width: 20%;
+}
+
+#error > img{
+    width: 100%;
+    margin: 0;
+}
+
+.fieldError{
+    color: #DB382A;
+}
+
+.social-media-icons{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 12px;
+
+}
+
+footer{
+    background-color: #B5E2FA; /*TODO: Footer needs diff backgorund colour*/
+}
+
+
+.left{
+    float:left;
+    padding-right: 12px;
+}

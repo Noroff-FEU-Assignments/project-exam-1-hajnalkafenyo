@@ -1,0 +1,12 @@
+.article-container{
+    max-width: 960px;
+    border-radius: 12px;
+    background-color: #c7e3f4;
+    padding: 12px;
+}
+
+#title{
+    width: 960px;
+}
+
+

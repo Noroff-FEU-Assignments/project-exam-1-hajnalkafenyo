@@ -1,0 +1,54 @@
+.carusel{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    
+@media only screen and (max-width:767px) {
+    & .arrow-button{
+        display: none;
+    }
+}
+}
+
+.card-container{
+    background-color: #B5E2FA;
+    flex-grow: 1;
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    width:240px; 
+    border: 1px solid black;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    padding: 6px;
+
+    @media only screen and (max-width:767px) {
+        width:100%;
+        display: block;
+    }
+}
+
+.card > p {
+    flex-grow: 1;
+}
+
+.card-picture{
+    width: 100%;
+    border-radius: 12px;
+    @media only screen and (max-width:767px) {
+    display: block;
+        float: left;
+        width: 20%;
+        margin-right: 12px;
+    }
+}

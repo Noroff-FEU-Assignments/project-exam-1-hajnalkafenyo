@@ -1,0 +1,42 @@
+
+.blog-container{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 960px;
+}
+
+.blog-item{
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: 12px;
+    margin: 12px 0;
+    background-color: #B5E2FA;
+    @media only screen and (max-width:767px) {
+        border-radius: 0;
+    }
+}
+
+.blog-item > h2{
+    font-family: var(--font-header);
+}
+
+.blog-item-content{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.blog-item-content > div{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.blog-item-thumbnail{
+    width: 122px;
+    display: block;
+    object-fit: contain;
+}
