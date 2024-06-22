@@ -50,6 +50,20 @@ function showMedia(MediaObjectum) {
     document.getElementById('banner').alt = MediaObjectum.alt;
 }
 
+function resizePicture() {
+    const images = document.querySelectorAll('.article-container img')
+    for (const image of images) {
+        image.addEventListener('click', function (e) {
+            document.querySelector('dialog img').src = e.target.src;
+            document.querySelector('dialog img').srcset = e.target.srcset;
+            document.querySelector('dialog').show();
+            document.body.style.overflow = 'hidden';
+        })
+    }
+
+
+}
+
 async function main() {
     try {
         const data = await fetchData(fullPostUrl);
@@ -59,6 +73,7 @@ async function main() {
         const MediaObjectum = mapMedia(fullMedia);
         showBlogData(post);
         showMedia(MediaObjectum);
+        resizePicture();
         document.getElementById('content').style.display = 'block';
         document.getElementById('loading').style.display = 'none';
 
@@ -71,6 +86,11 @@ async function main() {
 }
 
 main()
+
+document.querySelector('dialog').addEventListener('click', function (e) {
+    document.body.style.overflow = 'auto';
+    document.querySelector('dialog').close();
+});
 
 
 
